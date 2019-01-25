@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dynamic Category Selection</title>
+	<link href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css,npm/bootstrap@4.2.1/dist/css/bootstrap-grid.min.css,npm/bootstrap@4.2.1/dist/css/bootstrap-reboot.min.css,npm/select2@4.0.5/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<form>
+			<div class="cascading-category"></div>
+		</form>
+	</div>
+	<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.3.1,npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js,npm/select2@4.0.5/dist/js/select2.full.min.js,npm/select2@4.0.5/dist/js/i18n/fa.min.js"></script>
+	<script src="./dist/main.js"></script>
+	<script type="text/javascript">	
+		$(document).ready(function() {
+			let options = {
+				url: (parent) => "/" + defaultTo(parent,$(`<input value=""/>`)).val(),
+				label: 'Category',
+				maxLevel: 0,
+				template: (self, parent, ...params) => {
+					let result = ``;
+					if (parent)
+					{
+						let current = parseInt(parent.data(`level`)) + 1;
+						result = `
+<div class="form-group">
+	<label class="col-md-3">${self.label} - ${current}</label>
+	<select class="form-control col-md-6" data-level="${current}" name="${self.name}"><option></option></select>
+</div>
+            `;
+					}
+					else
+					{
+						result = `
+<div class="form-group">
+    <label class="col-md-3">${self.label}</label>
+    <select class="form-control col-md-6" data-level="0" name="${self.name}"><option></option></select>
+</div>
+			`;
+					}
+					return result;
+				}
+			};
+			$('.cascading-category').catcade(options);
+		});
+	</script>
+</body>
+</html>

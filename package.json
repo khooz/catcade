@@ -1,0 +1,23 @@
+{
+  "name": "catcade",
+  "version": "1.0.0",
+  "description": "Dynamic cascading category selection for jquery and select2",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "category",
+    "cascade",
+    "dynamic",
+    "select"
+  ],
+  "author": "Mustafa Talaeezadeh Khouzani",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.3.29",
+    "@types/select2": "^4.0.47",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {}
+}
