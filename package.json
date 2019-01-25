@@ -2,6 +2,11 @@
   "name": "catcade",
   "version": "1.0.0",
   "description": "Dynamic cascading category selection for jquery and select2",
+  "homepage": "https://github.com/tebco/catcade#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/tebco/catcade"
+  },
   "main": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
