@@ -1,1 +1,4 @@
 /node_modules
+/gulpfile.js
+/package-lock.json
+/package.1.json
