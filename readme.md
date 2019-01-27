@@ -27,6 +27,7 @@ $('.selector-for-an-empty-div-or-span-as-container').catcade('a-switch');
 where options and switches may include any of the properties discussed later. It returns the jQuery object it has fired upon for chaining.
 ## Options
 Almost all options are (no pun intended) optional.
+
 Property | Type  | Description | Default
 ---------|-------|-------------|--------
 container|JQuery | A jquery container that overrides the object which catcade has fired upon. | The object which catcade has fired upon.
