@@ -12,7 +12,7 @@
 
 This is a jQuery plugin, so be sure to include jQuery as your project dependency module or include in the pages using this plugin. This plugin also only uses `select2`, for now. support for pure HTML and vanilla javascript is in the roadmap. For now, to use this plugin, simply execute `npm i catcade` against your project or search for `catcade` in jsDelvr and use:
 ```html
-<script src="////cdn.jsdelivr.net/npm/catcade@1.0.1/dist/catcade.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/catcade@1.0.1/dist/catcade.min.js"></script>
 ```
 to include `catcade` to your project.
 ## Usage
